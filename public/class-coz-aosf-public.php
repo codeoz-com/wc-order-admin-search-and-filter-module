@@ -6,8 +6,8 @@
  * @link       www.codeoz.com
  * @since      1.0.0
  *
- * @package    Wc_Order_Admin_Search_And_Filter
- * @subpackage Wc_Order_Admin_Search_And_Filter/public
+ * @package    WC_Order_Admin_Search_And_Filter
+ * @subpackage WC_Order_Admin_Search_And_Filter/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Wc_Order_Admin_Search_And_Filter
- * @subpackage Wc_Order_Admin_Search_And_Filter/public
+ * @package    WC_Order_Admin_Search_And_Filter
+ * @subpackage WC_Order_Admin_Search_And_Filter/public
  * @author     codeOz <codeoz.au@gmail.com>
  */
-class Wc_Order_Admin_Search_And_Filter_Public {
+class WC_Order_Admin_Search_And_Filter_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -65,10 +65,10 @@ class Wc_Order_Admin_Search_And_Filter_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Wc_Order_Admin_Search_And_Filter_Loader as all of the hooks are defined
+		 * defined in WC_Order_Admin_Search_And_Filter_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Wc_Order_Admin_Search_And_Filter_Loader will then create the relationship
+		 * The WC_Order_Admin_Search_And_Filter_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
@@ -88,10 +88,10 @@ class Wc_Order_Admin_Search_And_Filter_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Wc_Order_Admin_Search_And_Filter_Loader as all of the hooks are defined
+		 * defined in WC_Order_Admin_Search_And_Filter_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Wc_Order_Admin_Search_And_Filter_Loader will then create the relationship
+		 * The WC_Order_Admin_Search_And_Filter_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */

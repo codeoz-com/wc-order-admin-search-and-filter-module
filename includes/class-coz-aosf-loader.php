@@ -6,8 +6,8 @@
  * @link       www.codeoz.com
  * @since      1.0.0
  *
- * @package    Wc_Order_Admin_Search_And_Filter
- * @subpackage Wc_Order_Admin_Search_And_Filter/includes
+ * @package    WC_Order_Admin_Search_And_Filter
+ * @subpackage WC_Order_Admin_Search_And_Filter/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Wc_Order_Admin_Search_And_Filter
- * @subpackage Wc_Order_Admin_Search_And_Filter/includes
+ * @package    WC_Order_Admin_Search_And_Filter
+ * @subpackage WC_Order_Admin_Search_And_Filter/includes
  * @author     codeOz <codeoz.au@gmail.com>
  */
-class Wc_Order_Admin_Search_And_Filter_Loader {
+class WC_Order_Admin_Search_And_Filter_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

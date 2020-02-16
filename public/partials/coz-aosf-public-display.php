@@ -8,8 +8,8 @@
  * @link       www.codeoz.com
  * @since      1.0.0
  *
- * @package    Wc_Order_Admin_Search_And_Filter
- * @subpackage Wc_Order_Admin_Search_And_Filter/public/partials
+ * @package    WC_Order_Admin_Search_And_Filter
+ * @subpackage WC_Order_Admin_Search_And_Filter/public/partials
  */
 ?>
 

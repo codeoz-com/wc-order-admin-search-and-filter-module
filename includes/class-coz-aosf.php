@@ -9,8 +9,8 @@
  * @link       www.codeoz.com
  * @since      1.0.0
  *
- * @package    Wc_Order_Admin_Search_And_Filter
- * @subpackage Wc_Order_Admin_Search_And_Filter/includes
+ * @package    WC_Order_Admin_Search_And_Filter
+ * @subpackage WC_Order_Admin_Search_And_Filter/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Wc_Order_Admin_Search_And_Filter
- * @subpackage Wc_Order_Admin_Search_And_Filter/includes
+ * @package    WC_Order_Admin_Search_And_Filter
+ * @subpackage WC_Order_Admin_Search_And_Filter/includes
  * @author     codeOz <codeoz.au@gmail.com>
  */
-class Wc_Order_Admin_Search_And_Filter {
+class WC_Order_Admin_Search_And_Filter {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Wc_Order_Admin_Search_And_Filter {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Wc_Order_Admin_Search_And_Filter_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      WC_Order_Admin_Search_And_Filter_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -86,10 +86,10 @@ class Wc_Order_Admin_Search_And_Filter {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Wc_Order_Admin_Search_And_Filter_Loader. Orchestrates the hooks of the plugin.
-	 * - Wc_Order_Admin_Search_And_Filter_i18n. Defines internationalization functionality.
-	 * - Wc_Order_Admin_Search_And_Filter_Admin. Defines all hooks for the admin area.
-	 * - Wc_Order_Admin_Search_And_Filter_Public. Defines all hooks for the public side of the site.
+	 * - WC_Order_Admin_Search_And_Filter_Loader. Orchestrates the hooks of the plugin.
+	 * - WC_Order_Admin_Search_And_Filter_i18n. Defines internationalization functionality.
+	 * - WC_Order_Admin_Search_And_Filter_Admin. Defines all hooks for the admin area.
+	 * - WC_Order_Admin_Search_And_Filter_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -122,14 +122,14 @@ class Wc_Order_Admin_Search_And_Filter {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-coz-aosf-public.php';
 
-		$this->loader = new Wc_Order_Admin_Search_And_Filter_Loader();
+		$this->loader = new WC_Order_Admin_Search_And_Filter_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Wc_Order_Admin_Search_And_Filter_i18n class in order to set the domain and to register the hook
+	 * Uses the WC_Order_Admin_Search_And_Filter_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -137,7 +137,7 @@ class Wc_Order_Admin_Search_And_Filter {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Wc_Order_Admin_Search_And_Filter_i18n();
+		$plugin_i18n = new WC_Order_Admin_Search_And_Filter_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -152,7 +152,7 @@ class Wc_Order_Admin_Search_And_Filter {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Wc_Order_Admin_Search_And_Filter_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new WC_Order_Admin_Search_And_Filter_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -168,7 +168,7 @@ class Wc_Order_Admin_Search_And_Filter {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Wc_Order_Admin_Search_And_Filter_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new WC_Order_Admin_Search_And_Filter_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -199,7 +199,7 @@ class Wc_Order_Admin_Search_And_Filter {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Wc_Order_Admin_Search_And_Filter_Loader    Orchestrates the hooks of the plugin.
+	 * @return    WC_Order_Admin_Search_And_Filter_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;
